@@ -1,0 +1,26 @@
+{
+  "name": "tripplanner-static-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drinkingChai/tripplanner-static-ui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drinkingChai/tripplanner-static-ui/issues"
+  },
+  "homepage": "https://github.com/drinkingChai/tripplanner-static-ui#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "nunjucks": "^3.0.1",
+    "pg": "^7.1.0",
+    "sequelize": "^4.4.2"
+  }
+}
