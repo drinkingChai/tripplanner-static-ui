@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "DATABASE_URL=postgres://localhost/tripplanner_db nodemon app.js",
-    "start": "DATABASE_URL=postgres://localhost/tripplanner_db node app.js"
+    "start": "DATABASE_URL=postgres://localhost/tripplanner_db node app.js",
+    "seed": "DATABASE_URL=postgres://localhost/tripplanner_db node seed.js"
   },
   "repository": {
     "type": "git",

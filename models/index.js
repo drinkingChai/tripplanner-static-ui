@@ -1,50 +1,33 @@
-const Sequelize = require('sequelize');
-const conn = new Sequelize(process.env.DATABASE_URL);
+const conn = require('./_db');
+
+const models = {
+	activity: require('./activity'),
+	hotel: require('./hotel'),
+	place: require('./place'),
+	restaurant: require('./restaurant')
+}
+
+// this function is to meet the seed spec
+const model = (name)=> {
+	return models[name];
+}
 
 
-// Hotel
-// name
-// num_stars (float from 1-5)
-// amenities (string of comma delimited items)
-//
-// Activity
-// name
-// age_range (data-type string)
-//
-// Restaurant
-// name
-// cuisine (comma delimited string list)
-// price (integer from 1-5 for how many dollar signs)
+models.hotel.belongsTo(models.place);
+models.activity.belongsTo(models.place);
+models.restaurant.belongsTo(models.place);
 
-
-conn.define('place', {
-  address: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  city: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  state: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  phone: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  location: {
-    type: Sequelize.ARRAY(Sequelize.DataTypes.FLOAT), // this array will only hold floats, location will be like 45.33, 234.33, array should have max of 2
-    allowNull: false
-  }
-})
+// place can have many hotels?
+models.place.hasMany(models.activity);
+models.place.hasMany(models.restaurant);
 
 
 const sync = ()=> {
-  return conn.sync({ force: true });
+	return conn.sync();
 }
 
 module.exports = {
-  sync
-}
+	sync,
+	models,
+	model
+};
