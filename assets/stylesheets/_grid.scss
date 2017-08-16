@@ -16,8 +16,8 @@ body { font-size: 100%; }
   // webkit-box-shadow: 
   $blur: $unit * 10px;
   $spread: $unit * 1px;
-  -webkit-box-shadow: 0 0 $blur $spread $color;
-  box-shadow: 0 0 $blur $spread $color;
+  -webkit-box-shadow: 0 1px $blur $spread $color;
+  box-shadow: 0 1px $blur $spread $color;
 }
 
 @mixin make-flex-nav($brd-clr) {
@@ -46,7 +46,12 @@ label, input, select {
 }
 
 label { font-weight: bold; }
-select { padding: 0.7em; background-color: $white; border: solid 1px $secondary; }
+select {
+  padding: 0.7em;
+  background-color: $white;
+  border: solid 1px $secondary;
+  border-radius: 2px;
+}
 
 // buttons
 .btn {
@@ -54,6 +59,7 @@ select { padding: 0.7em; background-color: $white; border: solid 1px $secondary;
   background-color: $white;
   border: 0;
   cursor: pointer;
+  border-radius: 2px;
 
   &-primary { background-color: $secondary; }
 }

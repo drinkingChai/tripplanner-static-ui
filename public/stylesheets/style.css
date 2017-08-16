@@ -19,13 +19,15 @@ label {
 select {
   padding: 0.7em;
   background-color: #fff;
-  border: solid 1px #ffeb3b; }
+  border: solid 1px #ffeb3b;
+  border-radius: 2px; }
 
 .btn {
   padding: 0.7em;
   background-color: #fff;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 2px; }
   .btn-primary {
     background-color: #ffeb3b; }
 
@@ -94,15 +96,15 @@ main {
 
 #map-canvas {
   height: 100%;
-  -webkit-box-shadow: 0 0 30px 3px #263238;
-  box-shadow: 0 0 30px 3px #263238; }
+  -webkit-box-shadow: 0 1px 30px 3px #263238;
+  box-shadow: 0 1px 30px 3px #263238; }
 
 nav {
   height: 3em;
   display: flex;
   padding: 0 20px;
-  -webkit-box-shadow: 0 0 10px 1px #000a12;
-  box-shadow: 0 0 10px 1px #000a12;
+  -webkit-box-shadow: 0 1px 10px 1px #000a12;
+  box-shadow: 0 1px 10px 1px #000a12;
   background-color: #263238;
   color: #fff; }
   nav .fa {
@@ -125,8 +127,8 @@ nav {
         font-size: 1.2em; }
 
 .picker {
-  -webkit-box-shadow: 0 0 10px 1px #263238;
-  box-shadow: 0 0 10px 1px #263238;
+  -webkit-box-shadow: 0 1px 10px 1px #263238;
+  box-shadow: 0 1px 10px 1px #263238;
   background-color: #263238;
   color: #fff;
   padding: 20px; }
@@ -137,7 +139,7 @@ nav {
   height: 100%;
   display: flex;
   margin-bottom: 20px;
-  border-bottom: solid 1px #ffeb3b; }
+  border-bottom: solid 2px #ffeb3b; }
   .section-nav li {
     height: 100%;
     display: flex;
@@ -157,8 +159,12 @@ nav {
     flex-grow: 1;
     justify-content: center;
     margin-right: 0;
-    border-right: solid 1px #ffeb3b;
-    font-size: 1.2em;
+    border-right: solid 2px #ffeb3b;
+    font-size: 1.4em;
     padding: 0.7em; }
     .section-nav li:last-child {
       border-right: 0; }
+
+.btn {
+  -webkit-box-shadow: 0 1px 10px 1px #002645;
+  box-shadow: 0 1px 10px 1px #002645; }

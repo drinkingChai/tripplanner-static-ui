@@ -52,7 +52,7 @@ nav {
 .section-nav {
   @include make-flex-nav($black);
   margin-bottom: $gutter;
-  border-bottom: solid 1px $secondary;
+  border-bottom: solid 2px $secondary;
 
   & .active { color: $secondary; }
 
@@ -60,9 +60,13 @@ nav {
     flex-grow: 1;
     justify-content: center;
     margin-right: 0;
-    border-right: solid 1px $secondary;
-    font-size: 1.2em;
+    border-right: solid 2px $secondary;
+    font-size: 1.4em;
     padding: 0.7em;
     &:last-child { border-right: 0; }
   }
+}
+
+.btn {
+  @include make-shade(1, lighten($p-dark, 10%));
 }
