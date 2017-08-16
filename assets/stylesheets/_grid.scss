@@ -1,0 +1,36 @@
+@import "_colors.scss";
+
+html { font-size: 16px; }
+body { font-size: 100%; }
+
+$cols: 8;
+$gutter: 20px;
+$view-height: calc(100vh - 3em);
+
+// rows
+.row {
+  // margin-top: $gutter;
+  // margin-bottom: $gutter;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  // &-escaped { margin: $gutter $gutter*-1 $gutter*-1 $gutter*-1; }
+}
+
+// columns
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    float: left;
+    $width: ($i / $cols);
+    width: percentage($width);
+    padding: $gutter;
+
+    // testing
+    // border: solid 1px $gray;
+    // background: $silver;
+  }
+}

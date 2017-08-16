@@ -16,3 +16,19 @@ $black: #111111;
 $gray: #AAAAAA;
 $silver: #DDDDDD;
 $white: #fff;
+
+// red material
+// $primary: #d32f2f;
+// $p-dark: #9a0007;
+// $p-light: #ff6659;
+// $secondary: #ffc400;
+// $s-dark: #c79400;
+// $s-light: #fff64f;
+
+// purple material
+$primary: #7e57c2;
+$p-dark: darken($primary, 20%);
+$p-light: lighten($primary, 20%);
+$secondary: #fafafa;
+$s-dark: darken($secondary, 20%);
+$s-light: lighten($secondary, 20%);

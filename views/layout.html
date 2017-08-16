@@ -10,17 +10,14 @@
   </head>
   <body>
 
-    <div class="row">
-      <nav class="col-2">
-        <!-- <i class="fa fa-glass" aria-hidden="true"></i> -->
-        <ul>
-          <li><a href="#">  Trip Planner</a></li>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav>
+      <ul>
+        <li class="brand"><a href="#"><i class="fa fa-glass" aria-hidden="true"></i> Trip Planner</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
     <main class="row">
       {% block content %}{% endblock %}
