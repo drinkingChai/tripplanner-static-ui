@@ -38,10 +38,26 @@ body { font-size: 100%; }
   }
 }
 
+// forms
 label, input, select {
-  display: block
+  display: block;
+  margin-bottom: 0.5em;
 }
 
+label { font-weight: bold; }
+select { padding: 0.7em; background-color: $white; border: solid 1px $secondary; }
+
+// buttons
+.btn {
+  padding: 0.7em;
+  background-color: $white;
+  border: 0;
+
+  &-primary { background-color: $secondary; }
+}
+
+
+// grids
 $cols: 8;
 $gutter: 20px;
 $view-height: create-vh();
@@ -68,4 +84,8 @@ $view-height: create-vh();
     width: percentage($width);
     padding: 0 $gutter;
   }
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
 }

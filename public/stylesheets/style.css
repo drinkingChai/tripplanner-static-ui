@@ -9,7 +9,23 @@ body {
   box-sizing: border-box; }
 
 label, input, select {
-  display: block; }
+  display: block;
+  margin-bottom: 0.5em; }
+
+label {
+  font-weight: bold; }
+
+select {
+  padding: 0.7em;
+  background-color: #fff;
+  border: solid 1px #ffeb3b; }
+
+.btn {
+  padding: 0.7em;
+  background-color: #fff;
+  border: 0; }
+  .btn-primary {
+    background-color: #ffeb3b; }
 
 .row:after {
   content: "";
@@ -56,6 +72,9 @@ label, input, select {
   width: 100%;
   padding: 0 20px; }
 
+[class*='col-']:last-of-type {
+  padding-right: 0; }
+
 * {
   font-family: "Roboto", sans-serif; }
 
@@ -80,7 +99,7 @@ nav {
   padding: 0 20px;
   -webkit-box-shadow: 0 0 10px 1px #000a12;
   box-shadow: 0 0 10px 1px #000a12;
-  background-color: #000a12;
+  background-color: #263238;
   color: #fff; }
   nav .fa {
     color: #ffeb3b; }
@@ -126,6 +145,8 @@ nav {
     .section-nav li.brand {
       font-weight: bold;
       font-size: 1.2em; }
+  .section-nav .active {
+    color: #ffeb3b; }
   .section-nav li {
     flex-grow: 1;
     justify-content: center;

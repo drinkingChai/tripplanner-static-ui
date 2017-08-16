@@ -11,7 +11,7 @@
 <!--       <li class="pick pick-hotel">Hotels</li>
       <li class="pick pick-food">Restaurants</li>
       <li class="pick pick-act">Activites</li> -->
-      <li><a href="" class="show-hotel"><i class="fa fa-bed" aria-hidden="true"></a></i></li>
+      <li><a href="" class="show-hotel active"><i class="fa fa-bed" aria-hidden="true"></a></i></li>
       <li><a href="" class="show-food"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
       <li><a href="" class="show-activities"><i class="fa fa-futbol-o" aria-hidden="true"></i></a></li>
       <!-- replace with symbols for responsive -->
@@ -24,7 +24,7 @@
         <option value="{{restaurant.id}}">{{restaurant.name}}</option>
         {% endfor %}
       </select>
-      <input type="submit" name="Add">
+      <input class="btn btn-primary" type="submit" name="Add">
     </form>
 
     <form class="hotels">
@@ -34,7 +34,7 @@
         <option value="{{hotel.id}}">{{hotel.name}}</option>
         {% endfor %}
       </select>
-      <input type="submit" name="Add">
+      <input class="btn btn-primary" type="submit" name="Add">
     </form>
 
     <form class="activities">
@@ -44,7 +44,7 @@
         <option value="{{activity.id}}">{{activity.name}}</option>
         {% endfor %}
       </select>
-      <input type="submit" name="Add">
+      <input class="btn btn-primary" type="submit" name="Add">
     </form>
   </section>
 
