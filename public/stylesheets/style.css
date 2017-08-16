@@ -1,2 +1,80 @@
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 16px; }
+
+body {
+  font-size: 100%; }
+
 #map-canvas {
   height: 100vh; }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.col-1 {
+  float: left;
+  width: 12.5%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-2 {
+  float: left;
+  width: 25%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-3 {
+  float: left;
+  width: 37.5%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-4 {
+  float: left;
+  width: 50%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-5 {
+  float: left;
+  width: 62.5%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-6 {
+  float: left;
+  width: 75%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-7 {
+  float: left;
+  width: 87.5%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+.col-8 {
+  float: left;
+  width: 100%;
+  border: solid 1px #AAAAAA;
+  background: #DDDDDD; }
+
+nav {
+  height: 3em;
+  float: right; }
+  nav ul {
+    height: 100%;
+    display: flex; }
+  nav ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    padding: 10px; }

@@ -3,24 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/reset.css">
     <link rel="stylesheet" href="stylesheets/style.css">
     <title></title>
   </head>
   <body>
 
-    <nav>
-      <a href="#"><i class="fa fa-glass" aria-hidden="true"></i>  Trip Planner</a>
+    <div class="row">
+      <nav class="col-2">
+        <!-- <i class="fa fa-glass" aria-hidden="true"></i> -->
+        <ul>
+          <li><a href="#">  Trip Planner</a></li>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-      <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-
-    <main>
+    <main class="row">
       {% block content %}{% endblock %}
     </main>
 

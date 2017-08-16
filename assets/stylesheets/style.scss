@@ -1,3 +1,57 @@
 @import "_colors.scss";
 
+* { box-sizing: border-box; }
+a { text-decoration: none; }
+
+html { font-size: 16px; }
+body { font-size: 100%; }
+
 #map-canvas { height: 100vh; }
+
+$cols: 8;
+$gutter: 20px;
+
+// rows
+.row {
+  // margin-top: $gutter;
+  // margin-bottom: $gutter;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  // &-escaped { margin: $gutter $gutter*-1 $gutter*-1 $gutter*-1; }
+}
+
+// columns
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    float: left;
+    $width: ($i / $cols);
+    width: percentage($width);
+    // padding: $gutter;
+
+    // testing
+    border: solid 1px $gray;
+    background: $silver;
+  }
+}
+
+nav {
+  height: 3em;
+  float: right;
+
+  & ul {
+    height: 100%;
+    display: flex;
+  }
+  & ul li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: $gutter / 2;
+    padding: $gutter / 2;
+  }
+}

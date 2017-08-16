@@ -2,64 +2,66 @@
 
 {% block content %}
 
-<div id="map-canvas"></div>
+<div id="map-canvas" class="col-6"></div>
 
-<div class=" attractions">
-  <div>
-    <label for="activites">Activities</label>
-    <select name="activites">
-      {% for activity in activities %}
-      <option value="{{activity.id}}">{{activity.name}}</option>
-      {% endfor %}
-    </select>
+<div class="col-2">
+  <div class="attractions">
+    <div>
+      <label for="activites">Activities</label>
+      <select name="activites">
+        {% for activity in activities %}
+        <option value="{{activity.id}}">{{activity.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div>
+      <label for="restaurants">Restaurants</label>
+      <select name="restaurants">
+        {% for restaurant in restaurants %}
+        <option value="{{restaurant.id}}">{{restaurant.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div>
+      <label for="hotels">Hotels</label>
+      <select name="hotels">
+        {% for hotel in hotels %}
+        <option value="{{hotel.id}}">{{hotel.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
   </div>
 
-  <div>
-    <label for="restaurants">Restaurants</label>
-    <select name="restaurants">
-      {% for restaurant in restaurants %}
-      <option value="{{restaurant.id}}">{{restaurant.name}}</option>
-      {% endfor %}
-    </select>
+  <div class="itinerary">
+    <h2>Day 2</h2>
+
+    <section>
+      <ul class="">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">+</a></li>
+      </ul>
+      <div>
+        <h3>My Hotel</h3>
+        <li>Palmer House</li>
+      </div>
+      <div>
+        <h3>My Restaurants</h3>
+        <li>Alinea</li>
+        <li>Seoul Taco</li>
+        <li>River Roast</li>
+      </div>
+      <div>
+        <h3>My Activities</h3>
+        <li>Shedd Aquarium</li>
+        <li>Cloud Gate</li>
+        <li>Jackson Park</li>
+      </div>
+    </section>
   </div>
-
-  <div>
-    <label for="hotels">Hotels</label>
-    <select name="hotels">
-      {% for hotel in hotels %}
-      <option value="{{hotel.id}}">{{hotel.name}}</option>
-      {% endfor %}
-    </select>
-  </div>
-</div>
-
-<div class="itinerary">
-  <h2>Day 2</h2>
-
-  <section>
-    <ul class="pagination">
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">+</a></li>
-    </ul>
-    <div>
-      <h3>My Hotel</h3>
-      <li>Palmer House</li>
-    </div>
-    <div>
-      <h3>My Restaurants</h3>
-      <li>Alinea</li>
-      <li>Seoul Taco</li>
-      <li>River Roast</li>
-    </div>
-    <div>
-      <h3>My Activities</h3>
-      <li>Shedd Aquarium</li>
-      <li>Cloud Gate</li>
-      <li>Jackson Park</li>
-    </div>
-  </section>
 </div>
 
 
