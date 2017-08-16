@@ -41,7 +41,8 @@ body { font-size: 100%; }
 // forms
 label, input, select {
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
+  font-size: 1em;
 }
 
 label { font-weight: bold; }
@@ -52,6 +53,7 @@ select { padding: 0.7em; background-color: $white; border: solid 1px $secondary;
   padding: 0.7em;
   background-color: $white;
   border: 0;
+  cursor: pointer;
 
   &-primary { background-color: $secondary; }
 }

@@ -16,6 +16,7 @@ main {
 
 #map-canvas {
   height: 100%;
+  @include make-shade(3, $primary);
 }
 
 
@@ -38,12 +39,12 @@ nav {
 }
 
 .picker {
-  // @include make-shade(1)
+  @include make-shade(1, $primary)
   background-color: $primary;
   color: $white;
   padding: $gutter;
 
-  & select {
+  & select, & input[type=submit] {
     width: 100%;
   }
 }
@@ -63,6 +64,5 @@ nav {
     font-size: 1.2em;
     padding: 0.7em;
     &:last-child { border-right: 0; }
-
   }
 }
