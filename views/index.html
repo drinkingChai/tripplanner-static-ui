@@ -2,67 +2,63 @@
 
 {% block content %}
 
-<div id="map-canvas"></div>
+<div id="map-canvas" class="col-6"></div>
 
-<div class=" attractions">
-  <div>
-    <label for="activites">Activities</label>
-    <select name="activites">
-      {% for activity in activities %}
-      <option value="{{activity.id}}">{{activity.name}}</option>
-      {% endfor %}
-    </select>
-  </div>
-
-  <div>
-    <label for="restaurants">Restaurants</label>
-    <select name="restaurants">
-      {% for restaurant in restaurants %}
-      <option value="{{restaurant.id}}">{{restaurant.name}}</option>
-      {% endfor %}
-    </select>
-  </div>
-
-  <div>
-    <label for="hotels">Hotels</label>
-    <select name="hotels">
-      {% for hotel in hotels %}
-      <option value="{{hotel.id}}">{{hotel.name}}</option>
-      {% endfor %}
-    </select>
-  </div>
-</div>
-
-<div class="itinerary">
-  <h2>Day 2</h2>
-
-  <section>
-    <ul class="pagination">
-      <li><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">+</a></li>
-    </ul>
-    <div>
-      <h3>My Hotel</h3>
-      <li>Palmer House</li>
+<section class="col-2">
+  
+  <section class="picker">
+    <div class="section-nav">
+<!--       <li class="pick pick-hotel">Hotels</li>
+      <li class="pick pick-food">Restaurants</li>
+      <li class="pick pick-act">Activites</li> -->
+      <li><a href="" class="show-hotel active"><i class="fa fa-bed" aria-hidden="true"></a></i></li>
+      <li><a href="" class="show-food"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
+      <li><a href="" class="show-activities"><i class="fa fa-futbol-o" aria-hidden="true"></i></a></li>
+      <!-- replace with symbols for responsive -->
     </div>
-    <div>
-      <h3>My Restaurants</h3>
-      <li>Alinea</li>
-      <li>Seoul Taco</li>
-      <li>River Roast</li>
-    </div>
-    <div>
-      <h3>My Activities</h3>
-      <li>Shedd Aquarium</li>
-      <li>Cloud Gate</li>
-      <li>Jackson Park</li>
-    </div>
+
+    <form class="food">
+      <label for="restaurants">Restaurants</label>
+      <select name="restaurants">
+        {% for restaurant in restaurants %}
+        <option value="{{restaurant.id}}">{{restaurant.name}}</option>
+        {% endfor %}
+      </select>
+      <input class="btn btn-primary" type="submit" name="Add">
+    </form>
+
+    <form class="hotels">
+      <label for="hotels">Hotels</label>
+      <select name="hotels">
+        {% for hotel in hotels %}
+        <option value="{{hotel.id}}">{{hotel.name}}</option>
+        {% endfor %}
+      </select>
+      <input class="btn btn-primary" type="submit" name="Add">
+    </form>
+
+    <form class="activities">
+      <label for="activities">Activities</label>
+      <select name="activities">
+        {% for activity in activities %}
+        <option value="{{activity.id}}">{{activity.name}}</option>
+        {% endfor %}
+      </select>
+      <input class="btn btn-primary" type="submit" name="Add">
+    </form>
   </section>
-</div>
 
 
+
+  <section class="itinerary">
+    
+
+  </section>
+
+
+
+
+</section>
 
 
 {% endblock %}
