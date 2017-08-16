@@ -17,6 +17,9 @@ label {
   font-weight: bold; }
 
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   padding: 0.7em;
   background-color: #fff;
   border: solid 1px #ffeb3b;
