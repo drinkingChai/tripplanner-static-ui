@@ -178,7 +178,8 @@ function initialize_gmaps() {
     var marker = new google.maps.Marker({
         position: myLatlng,
         title:"Hello World!",
-        icon: image
+        icon: image,
+        draggable: true,
     });
     
         
