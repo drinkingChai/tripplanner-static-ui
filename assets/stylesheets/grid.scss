@@ -1,0 +1,99 @@
+@import "_colors.scss";
+
+html { font-size: 16px; }
+body { font-size: 100%; }
+* { box-sizing: border-box;}
+
+@function create-vh() {
+  // don't think this is working as intended
+  $height: -webkit-calc(100vh - 3em);
+  $height:    -moz-calc(100vh - 3em);
+  $height:         calc(100vh - 3em);
+  @return $height;
+}
+
+@mixin make-shade($unit, $color: $silver) {
+  // webkit-box-shadow: 
+  $blur: $unit * 10px;
+  $spread: $unit * 1px;
+  -webkit-box-shadow: 0 1px $blur $spread $color;
+  box-shadow: 0 1px $blur $spread $color;
+}
+
+@mixin make-flex-nav($brd-clr) {
+  height: 100%;
+  display: flex;
+
+  & li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: $gutter / 2;
+    padding: $gutter / 3 $gutter / 1.5;
+
+    &:first-child { padding-left: 0; }
+
+    &.active { border-bottom: solid 2px $brd-clr; }
+    &.brand { font-weight: bold; font-size: 1.2em; }
+  }
+}
+
+// forms
+label, input, select {
+  display: block;
+  margin-bottom: 0.6em;
+  font-size: 1em;
+}
+
+label { font-weight: bold; }
+select {
+  padding: 0.7em;
+  background-color: $white;
+  border: solid 1px $secondary;
+  border-radius: 2px;
+}
+
+// buttons
+.btn {
+  padding: 0.7em;
+  background-color: $white;
+  border: 0;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &-primary { background-color: $secondary; }
+}
+
+
+// grids
+$cols: 8;
+$gutter: 20px;
+$view-height: create-vh();
+
+// rows
+.row {
+  // margin-top: $gutter;
+  // margin-bottom: $gutter;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  // &-escaped { margin: $gutter $gutter*-1 $gutter*-1 $gutter*-1; }
+}
+
+// columns
+@for $i from 1 through $cols {
+  .col-#{$i} {
+    float: left;
+    $width: ($i / $cols);
+    width: percentage($width);
+    padding: 0 $gutter;
+  }
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
