@@ -13,6 +13,8 @@ app.engine('html', nunjucks.render);
 nunjucks.configure('views', { noCache: true });
 
 app.use(express.static(path.resolve('public')));
+app.use('/bootstrap', express.static(path.resolve('node_modules/bootstrap/dist')));
+app.use('/jquery', express.static(path.resolve('node_modules/jquery/dist')));
 app.use(morgan('dev'));
 
 app.use(bodyParser.json());

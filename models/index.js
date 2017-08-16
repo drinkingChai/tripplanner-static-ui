@@ -22,6 +22,17 @@ models.place.hasMany(models.activity);
 models.place.hasMany(models.restaurant);
 
 
+const generateHomeView = ()=> {
+  return Promise.all([
+    models.activity.findAll(),
+    models.hotel.findAll(),
+    models.restaurant.findAll()
+  ]).then(data=> {
+    return { activities: data[0], hotels: data[1], restaurants: data[2] };
+  })
+}
+
+
 const sync = ()=> {
 	return conn.sync();
 }
@@ -29,5 +40,6 @@ const sync = ()=> {
 module.exports = {
 	sync,
 	models,
-	model
+	model,
+  generateHomeView
 };
