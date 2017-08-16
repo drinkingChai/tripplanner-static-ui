@@ -1,15 +1,3 @@
 @import "_colors.scss";
 
-#map-canvas {
-  height: 90vh;
-}
-
-.attractions {
-  background-color: $teal;
-  padding: 20px; // maybe bootstrap has some padding class
-}
-
-.itinerary {
-  background-color: $yellow;
-  padding: 20px;
-}
+#map-canvas { height: 100vh; }
