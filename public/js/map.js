@@ -181,7 +181,25 @@ function initialize_gmaps() {
         icon: image,
         draggable: true,
     });
-    
+    var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">I\'M BATMAN !!!</h1>'+
+      '<div id="bodyContent">'+
+      '<p>Batman, Batman, Batman<br>'+
+      'Da da da da da da<br>'+
+      'Batman, Batman, Batman, Batman<br>'+
+      'da da da da da da<br>'+
+      '<b>BATMAN !!!</b></p>'
+      '</div>'+
+      '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+    });
         
     // Add the marker to the map by calling setMap()
     marker.setMap(map);
