@@ -1,5 +1,6 @@
 @import "_colors.scss";
 @import "_grid.scss";
+@import "_responsive.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $roboto: 'Roboto', sans-serif;
@@ -16,11 +17,28 @@ body { background-color: $p-light; }
 main {
   display: flex;
   padding: $gutter;
+
+  @include make-media($breakpoint-sm) { flex-direction: column; };
 }
 
 #map-canvas {
   flex-grow: 1;
   @include make-shade(3, $primary);
+
+  @include make-media($breakpoint-md) { width: 60%; };
+  @include make-media($breakpoint-sm) {
+    width: 100%;
+    height: 100vw;
+    margin-bottom: 1.3em;
+  };
+}
+
+#planner {
+  @include make-media($breakpoint-md) { width: 40%; };
+  @include make-media($breakpoint-sm) {
+    width: 100%;
+    padding-left: 0;
+  };
 }
 
 
@@ -45,6 +63,8 @@ nav {
 .picker {
   @include make-box($primary, $white);
   margin-bottom: 1.5em;
+
+  label { font-size: 1.2em; }
 
   & select, & input[type=submit] {
     width: 100%;

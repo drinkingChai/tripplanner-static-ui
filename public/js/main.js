@@ -11,7 +11,6 @@ buttonMap.forEach(i=> {
     $(`.picker .active`).removeClass('active');
     $(button).addClass('active');
     $('.pick').addClass('hidden');
-    console.log(section);
     $(section).removeClass('hidden');
   });
 })
