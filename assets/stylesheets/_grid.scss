@@ -13,7 +13,7 @@ body { font-size: 100%; }
 }
 
 @mixin make-shade($unit, $color: $silver) {
-  // webkit-box-shadow: 
+  // webkit-box-shadow:
   $blur: $unit * 10px;
   $spread: $unit * 1px;
   -webkit-box-shadow: 0 1px $blur $spread $color;
@@ -37,6 +37,14 @@ body { font-size: 100%; }
     &.brand { font-weight: bold; font-size: 1.2em; }
   }
 }
+
+@mixin make-box($bgcolor, $color) {
+  @include make-shade(1, $primary)
+  background-color: $bgcolor;
+  color: $color;
+  padding: $gutter;
+}
+
 
 // forms
 label, input, select {

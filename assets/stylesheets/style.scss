@@ -6,16 +6,20 @@ $roboto: 'Roboto', sans-serif;
 
 * { font-family: $roboto; }
 a { color: inherit; text-decoration: none; font-family: $roboto; }
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.7em; }
+h4 { font-size: 1.2em; }
 
 body { background-color: $p-light; }
 
 main {
-  height: $view-height;
+  display: flex;
   padding: $gutter;
 }
 
 #map-canvas {
-  height: 100%;
+  flex-grow: 1;
   @include make-shade(3, $primary);
 }
 
@@ -39,14 +43,38 @@ nav {
 }
 
 .picker {
-  @include make-shade(1, $primary)
-  background-color: $primary;
-  color: $white;
-  padding: $gutter;
+  @include make-box($primary, $white);
+  margin-bottom: 1.5em;
 
   & select, & input[type=submit] {
     width: 100%;
+    color: $black;
   }
+}
+
+.itinerary {
+  @include make-box($primary, $white);
+
+  & li {
+    list-style-type: none;
+    font-size: 1.2em;
+  }
+
+  & section:not(:last-child) { margin-bottom: 1.3em; }
+
+  & .section-nav {
+    padding-bottom: 1em;
+    & .btn {
+      color: $black;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.section-head-sm {
+  color: $secondary;
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 .section-nav {
@@ -69,4 +97,6 @@ nav {
 
 .btn {
   @include make-shade(1, lighten($p-dark, 10%));
+
+  &-active { background-color: $secondary; }
 }

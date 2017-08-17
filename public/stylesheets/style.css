@@ -90,15 +90,27 @@ a {
   text-decoration: none;
   font-family: "Roboto", sans-serif; }
 
+h1 {
+  font-size: 3em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.7em; }
+
+h4 {
+  font-size: 1.2em; }
+
 body {
   background-color: #4f5b62; }
 
 main {
-  height: calc(100vh - 3em);
+  display: flex;
   padding: 20px; }
 
 #map-canvas {
-  height: 100%;
+  flex-grow: 1;
   -webkit-box-shadow: 0 1px 30px 3px #263238;
   box-shadow: 0 1px 30px 3px #263238; }
 
@@ -134,9 +146,33 @@ nav {
   box-shadow: 0 1px 10px 1px #263238;
   background-color: #263238;
   color: #fff;
-  padding: 20px; }
+  padding: 20px;
+  margin-bottom: 1.5em; }
   .picker select, .picker input[type=submit] {
-    width: 100%; }
+    width: 100%;
+    color: #111111; }
+
+.itinerary {
+  -webkit-box-shadow: 0 1px 10px 1px #263238;
+  box-shadow: 0 1px 10px 1px #263238;
+  background-color: #263238;
+  color: #fff;
+  padding: 20px; }
+  .itinerary li {
+    list-style-type: none;
+    font-size: 1.2em; }
+  .itinerary section:not(:last-child) {
+    margin-bottom: 1.3em; }
+  .itinerary .section-nav {
+    padding-bottom: 1em; }
+    .itinerary .section-nav .btn {
+      color: #111111;
+      margin-right: 0.5em; }
+
+.section-head-sm {
+  color: #ffeb3b;
+  display: block;
+  margin-bottom: 0.5em; }
 
 .section-nav {
   height: 100%;
@@ -171,3 +207,5 @@ nav {
 .btn {
   -webkit-box-shadow: 0 1px 10px 1px #002645;
   box-shadow: 0 1px 10px 1px #002645; }
+  .btn-active {
+    background-color: #ffeb3b; }
