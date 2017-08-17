@@ -58,6 +58,8 @@ nav {
     width: 100%;
     color: $black;
   }
+
+  & .fa-inverse { color: $primary; }
 }
 
 .itinerary {
@@ -98,7 +100,7 @@ nav {
     flex-grow: 1;
     justify-content: center;
     margin-right: 0;
-    border-right: solid 2px $secondary;
+    // border-right: solid 2px $secondary;
     font-size: 1.4em;
     padding: 0.7em;
     &:last-child { border-right: 0; }
