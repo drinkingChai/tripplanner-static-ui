@@ -169,6 +169,9 @@ nav {
       color: #111111;
       margin-right: 0.5em; }
 
+.hidden {
+  display: none; }
+
 .section-head-sm {
   color: #ffeb3b;
   display: block;
