@@ -2,19 +2,15 @@
 
 {% block content %}
 
-<div id="map-canvas" class="col-7"></div>
+<div id="map-canvas" class="col-7 col-md-6 col-sm-10"></div>
 
-<section id="planner" class="col-3">
+<section id="planner" class="col-3 col-md-4 col-sm-10">
 
   <section class="picker">
     <div class="section-nav">
-<!--       <li class="pick pick-hotel">Hotels</li>
-      <li class="pick pick-food">Restaurants</li>
-      <li class="pick pick-act">Activites</li> -->
       <li><a href="" class="show-hotels active"><i class="fa fa-bed" aria-hidden="true"></a></i></li>
       <li><a href="" class="show-food"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
       <li><a href="" class="show-activities"><i class="fa fa-futbol-o" aria-hidden="true"></i></a></li>
-      <!-- replace with symbols for responsive -->
     </div>
 
     <form class="pick food hidden">
@@ -31,9 +27,12 @@
       <label for="hotels">Hotels</label>
       <select name="hotels">
         {% for hotel in hotels %}
-        <option value="{{hotel.id}}">{{hotel.name}}</option>
+        <option value="{{hotel.id}}">{{hotel.name}}
+        </option>
         {% endfor %}
       </select>
+      <!-- <span class="triangle"></span> -->
+
       <input class="btn btn-primary" type="submit" name="" value="Add">
     </form>
 

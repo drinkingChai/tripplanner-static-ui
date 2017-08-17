@@ -18,29 +18,17 @@ main {
   display: flex;
   padding: $gutter;
 
-  @include make-media($breakpoint-sm) { flex-direction: column; };
+  @include make-media-max($breakpoint-sm) { flex-direction: column; };
 }
 
 #map-canvas {
   flex-grow: 1;
   @include make-shade(3, $primary);
 
-  @include make-media($breakpoint-md) { width: 60%; };
-  @include make-media($breakpoint-sm) {
-    width: 100%;
+  @include make-media-max($breakpoint-sm) {
     height: 100vw;
-    margin-bottom: 1.3em;
   };
 }
-
-#planner {
-  @include make-media($breakpoint-md) { width: 40%; };
-  @include make-media($breakpoint-sm) {
-    width: 100%;
-    padding-left: 0;
-  };
-}
-
 
 nav {
   height: 3em;

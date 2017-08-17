@@ -1,4 +1,5 @@
 @import "_colors.scss";
+@import "_responsive.scss";
 
 html { font-size: 16px; }
 body { font-size: 100%; }
@@ -55,14 +56,27 @@ label, input, select {
 
 label { font-weight: bold; }
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   // need to remake the arrow
   padding: 0.7em;
   background-color: $white;
   border: solid 1px $secondary;
   border-radius: 2px;
+}
+select, input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.triangle {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: $s-dark;
+  border-bottom: transparent;
+  border-width: 10px;
+  border-style: solid;
 }
 
 // buttons
@@ -78,7 +92,7 @@ select {
 
 
 // grids
-$cols: 8;
+$cols: 10;
 $gutter: 20px;
 $view-height: create-vh();
 
@@ -97,12 +111,25 @@ $view-height: create-vh();
 }
 
 // columns
+@mixin make-col($i) {
+  float: left;
+  $width: ($i / $cols);
+  width: percentage($width);
+  padding: 0 $gutter;
+}
 @for $i from 1 through $cols {
   .col-#{$i} {
-    float: left;
-    $width: ($i / $cols);
-    width: percentage($width);
-    padding: 0 $gutter;
+    @include make-media-min($breakpoint-lg) { @include make-col($i); };
+  }
+  .col-md-#{$i} {
+    @include make-media-max($breakpoint-lg) { @include make-col($i); };
+  }
+  .col-sm-#{$i} {
+    @include make-media-max($breakpoint-sm) {
+      @include make-col($i);
+      margin-bottom: 1.3em;
+      padding-left: 0;
+    };
   }
 }
 
