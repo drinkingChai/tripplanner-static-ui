@@ -14,3 +14,8 @@ buttonMap.forEach(i=> {
     $(section).removeClass('hidden');
   });
 })
+
+
+picker({
+  parent: `#planner`
+})

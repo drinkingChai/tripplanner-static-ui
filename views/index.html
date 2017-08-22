@@ -6,65 +6,7 @@
 
 <section id="planner" class="col-3 col-md-4 col-sm-10">
 
-  <section class="picker">
-    <div class="section-nav">
-      <li><a href="" class="show-hotels active">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-bed fa-stack-1x fa-inverse" aria-hidden="true"></i>
-        </span>
-      </a></li>
-      <li><a href="" class="show-food">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-cutlery fa-stack-1x fa-inverse" aria-hidden="true"></i>
-        </span>
-      </a></li>
-      <li><a href="" class="show-activities">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-camera-retro fa-stack-1x fa-inverse" aria-hidden="true"></i>
-        </span>
-      </a></li>
-
-      <!-- <li><a href="" class="show-hotels active"><i class="fa fa-bed" aria-hidden="true"></a></i></li>
-      <li><a href="" class="show-food"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
-      <li><a href="" class="show-activities"><i class="fa fa-futbol-o" aria-hidden="true"></i></a></li> -->
-    </div>
-
-    <form class="pick food hidden">
-      <label for="restaurants">Restaurants</label>
-      <select name="restaurants">
-        {% for restaurant in restaurants %}
-        <option value="{{restaurant.id}}">{{restaurant.name}}</option>
-        {% endfor %}
-      </select>
-      <input class="btn btn-primary" type="submit" name="" value="Add">
-    </form>
-
-    <form class="pick hotels">
-      <label for="hotels">Hotels</label>
-      <select name="hotels">
-        {% for hotel in hotels %}
-        <option value="{{hotel.id}}">{{hotel.name}}
-        </option>
-        {% endfor %}
-      </select>
-      <!-- <span class="triangle"></span> -->
-
-      <input class="btn btn-primary" type="submit" name="" value="Add">
-    </form>
-
-    <form class="pick activities hidden">
-      <label for="activities">Activities</label>
-      <select name="activities">
-        {% for activity in activities %}
-        <option value="{{activity.id}}">{{activity.name}}</option>
-        {% endfor %}
-      </select>
-      <input class="btn btn-primary" type="submit" name="" value="Add">
-    </form>
-  </section>
+  
 
 
 
@@ -102,5 +44,6 @@
 
 </section>
 
+<script src="js/picker.js" charset="utf-8"></script>
 
 {% endblock %}
