@@ -6,6 +6,20 @@
 
 <section id="planner" class="col-3 col-md-4 col-sm-10">
 
+
+  <!-- for passing data to jQuery -->
+  <!-- seeems like a terrible way to do it.... -->
+  <dataStuff id="all-data">
+    {% for r in restaurants %}
+      <dataThings data-type="restaurants" data-id="{{r.id}}" data-name="{{r.name}}"></dataThings>
+    {% endfor %}
+    {% for r in hotels %}
+      <dataThings data-type="hotels" data-id="{{r.id}}" data-name="{{r.name}}"></dataThings>
+    {% endfor %}
+    {% for r in activities %}
+      <dataThings data-type="activities" data-id="{{r.id}}" data-name="{{r.name}}"></dataThings>
+    {% endfor %}
+  </dataStuff>
   
 
 
@@ -35,6 +49,7 @@
       <li>Blue Man's Group</li>
       <li>Scott's Pizza Tours</li>
     </section>
+
 
 
   </section>

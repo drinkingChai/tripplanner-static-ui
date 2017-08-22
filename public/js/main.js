@@ -15,7 +15,11 @@ buttonMap.forEach(i=> {
   });
 })
 
+let data = $('#all-data dataThings').map((i, el)=> $(el).data());
 
-picker({
-  parent: `#planner`
+
+
+drawPicker({
+  parent: `#planner`,
+  content: data
 })

@@ -1,4 +1,4 @@
-const picker = function(config) {
+const drawPicker = function(config) {
   /*
     config:
       parent
@@ -9,16 +9,22 @@ const picker = function(config) {
   let template = `
     <section class='picker'>
       <section class='picker-nav'></section>
-      <section class='pick'></section>
+      <section class='picks'></section>
     </section>
   `;
 
-  let $html = $(template);
+  let $html = $(template),
+    $pickerNav = $html.find('.picker-nav'),
+    $picks = $html.find('.picks');
+
+  // add to config later
+  console.log(data);
+
 
   $(config.parent).append($html);
 }
 
-const pickerNavBtn = function(config) {
+const drawPickerBtn = function(config) {
   /*
     config:
       parent,
@@ -41,6 +47,7 @@ const pickerNavBtn = function(config) {
 
   $html.on('click', 'a', function(e) {
     e.preventDefault();
+    console.log($(this));
     $(this).addClass('active');
     $(config.bindTo).removeClass('hidden');
   })
@@ -48,7 +55,7 @@ const pickerNavBtn = function(config) {
   $(config.parent).append($html);
 }
 
-const pick = function(config) {
+const drawPick = function(config) {
   /*
     config:
       parent,
