@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "DATABASE_URL=postgres://localhost/tripplanner_db nodemon app.js",
+    "start:dev": "DATABASE_URL=postgres://localhost/tripplanner_db nodemon app.js --ignore public",
     "build:css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
     "start": "node app.js",
     "nycseed": "DATABASE_URL=postgres://localhost/tripplanner_db node nycseed.js",
@@ -28,6 +28,7 @@
     "express": "^4.15.4",
     "jquery": "^3.2.1",
     "morgan": "^1.8.2",
+    "node-sass": "^4.5.3",
     "nunjucks": "^3.0.1",
     "pg": "^6.4.1",
     "sequelize": "^4.4.2"
